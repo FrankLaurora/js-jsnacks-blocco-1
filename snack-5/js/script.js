@@ -4,8 +4,11 @@ var oddNumbers = [];
 
 for (var i = 1; i <= 6; i++) {
     var userNum = parseInt(prompt("Inserisci un numero."));
-    if (userNum % 2 != 0) {
-        oddNumbers.push(userNum)
+    if (isNaN(userNum)) {
+        alert("Non hai inserito un numero!");
+        i--;
+    } else if (userNum % 2 != 0) {
+        oddNumbers.push(userNum);
     }
 }
 
